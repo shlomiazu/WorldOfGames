@@ -24,7 +24,7 @@ pipeline {
         stage('push to DockerHub') {
             steps {
                  bat 'docker tag wog-score-img shlomiaz/scores_of_wog'
-                 bat 'docker push shlomiaz/wog_rep'
+                 bat 'docker push shlomiaz/wog-score-img'
             }
         }
         stage('rm to container & img') {
