@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('connect to git') {
             steps {
-                git 'https://github.com/shlomiazu/MySoftware.git'
+                git 'https://github.com/shlomiazu/WorldOfGames.git'
             }
         }
         stage('Get DockerFile to Build img') {
