@@ -27,15 +27,11 @@ def set_html_error():
                 <title>Scores Game</title>
             </head>
             <body>
-                <h1 id="description" >Error <span id="score" style="color:red">{Utils.BAD_RETURN_CODE}</span></h1>
+                <h1 id="description" >Error <span id="score" style="color:red">{"Failed"}</span></h1>
             </body>
     </html>"""
     return html
 
-@app.errorhandler(Exception)
-def server_error(erorr):
-    app.logger.exception(erorr)
-    return set_html_error(), int(Utils.BAD_RETURN_CODE)
 
 @app.route("/")
 def call_to_flask():
@@ -44,7 +40,7 @@ def call_to_flask():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8777)
+    app.run(debug=True, host='0.0.0.0', port=8775)
 
 
 
