@@ -21,6 +21,7 @@ def set_html(score):
     </html>"""
     return html
 
+
 def set_html_error():
     html = f"""<html>
             <head>
