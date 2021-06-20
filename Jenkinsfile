@@ -23,7 +23,7 @@ pipeline {
         }
         stage('push to DockerHub') {
             steps {
-                 bat 'docker tag games shlomiaz/scores_of_wog'
+                 bat 'docker tag wog-score-img shlomiaz/scores_of_wog'
                  bat 'docker push shlomiaz/wog_rep'
             }
         }
