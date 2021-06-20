@@ -24,6 +24,7 @@ pipeline {
         stage('push to DockerHub') {
             steps {
                  bat 'docker tag wog-score-img shlomiaz/wog-score-img'
+                 bat 'docker login -u "shlomiaz" -p "Ayala0104!" docker.io'
                  bat 'docker push shlomiaz/wog-score-img'
             }
         }
